@@ -1,12 +1,15 @@
 {
   "compilerOptions": {
+    "module": "esnext",
     "target": "esnext",
     "moduleResolution": "node",
-    "outDir": "dist"
+    "outDir": "dist",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    },
   },
-  "files": [
-    "src/index.ts"
-  ],
+  "include": ["src/**/*.ts"],
   "watchOptions": {
     "watchFile": "useFsEvents",
     "watchDirectory": "useFsEvents",
